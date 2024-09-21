@@ -15,3 +15,4 @@ google-cloud-aiplatform==1.51.0
 yfiles_jupyter_graphs>=1.8.1
 langchainhub>=0.1.21
 chardet>=5.2.0
+httpx-oauth==0.4.1

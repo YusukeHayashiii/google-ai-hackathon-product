@@ -33,7 +33,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN mkdir -p /root/.config/gcloud
 
 # 認証情報をコピー
-COPY application_default_credentials.json /root/.config/gcloud/
+# COPY application_default_credentials.json /root/.config/gcloud/
 
 # ポートの公開（Cloud Runでは8080）
 EXPOSE 8080
