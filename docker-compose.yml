@@ -16,9 +16,6 @@ services:
             - REGION=${REGION}
             - STAGING_BUCKET=${STAGING_BUCKET}
             - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
-        volumes: 
-            # - ".:/app" # [ホストのpath]：[コンテナのpath]
-            - "${GOOGLE_APPLICATION_CREDENTIALS_HOST}:${GOOGLE_APPLICATION_CREDENTIALS}"
         ports: # ホスト：コンテナのポート番号を指定。ホストは他コンテナと番号被らないようにする
             - "8080:8080" 
         tty: true # コンテナを起動し続ける

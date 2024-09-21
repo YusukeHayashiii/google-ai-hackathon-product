@@ -57,9 +57,10 @@ AURA_INSTANCENAME=your_aura_instancename
 PROJECT_ID=your_project_id
 REGION=your_region
 STAGING_BUCKET=your_staging_bucket
+GOOGLE_APPLICATION_CREDENTIALS=your_google_application_credentials_path
 ```
 
-### 起動方法
+### ローカルでの起動方法
 
 1. リポジトリをクローンします：
 
@@ -71,7 +72,7 @@ cd google-ai-hackathon-product
 2. Docker Composeを使用してアプリケーションを起動します：
 
 ```bash
-docker-compose up --build
+docker-compose up -d
 ```
 
 3. ブラウザで `http://localhost:8080` にアクセスしてアプリケーションを使用します。
