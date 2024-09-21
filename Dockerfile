@@ -36,5 +36,5 @@ RUN mkdir -p /root/.config/gcloud
 EXPOSE 8080
 
 # Streamlitアプリの起動（Cloud Runでは8080）
-ENTRYPOINT ["streamlit", "run", "--server.port=8080", "--server.address=0.0.0.0"]
-CMD ["app.py"]
+ENTRYPOINT ["streamlit", "run"]
+CMD ["app.py", "--server.port=8080", "--server.address=0.0.0.0"]
