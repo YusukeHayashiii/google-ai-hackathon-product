@@ -64,8 +64,8 @@ STAGING_BUCKET=your_staging_bucket
 1. リポジトリをクローンします：
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/YusukeHayashiii/google-ai-hackathon-product.git
+cd google-ai-hackathon-product
 ```
 
 2. Docker Composeを使用してアプリケーションを起動します：
@@ -95,4 +95,4 @@ docker-compose up --build
 
 ## 貢献
 
-プロジェクトへの貢献を歓迎します。問題の報告やプルリクエストは[GitHubリポジトリ](<repository-url>)までお願いします。
+プロジェクトへの貢献を歓迎します。問題の報告やプルリクエストは[GitHubリポジトリ](https://github.com/YusukeHayashiii/google-ai-hackathon-product.git)までお願いします。
