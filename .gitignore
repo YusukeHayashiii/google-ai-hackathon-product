@@ -155,3 +155,5 @@ cython_debug/
 # custom
 .DS_Store
 others/
+application_default_credentials.json
+praxis-tensor-434514-e6-7f874109efde.json

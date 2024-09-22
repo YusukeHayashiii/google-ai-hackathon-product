@@ -23,18 +23,21 @@ WORKDIR /app
 COPY requirements.txt .
 COPY app.py .
 COPY src/ ./src/
-# 開発環境用の.envファイルをコピー（本番環境では削除）
+# 開発環境用の.envファイルをコピー（本番環境では不要）
 COPY .env .env
 
 # Pythonライブラリのインストール
 RUN pip install --no-cache-dir -r requirements.txt
 
-# gcloudの設定ディレクトリを作成（本番環境では削除）
+# gcloudの設定ディレクトリを作成
 RUN mkdir -p /root/.config/gcloud
+
+# 認証情報をコピー
+COPY application_default_credentials.json /root/.config/gcloud/
 
 # ポートの公開（Cloud Runでは8080）
 EXPOSE 8080
 
 # Streamlitアプリの起動（Cloud Runでは8080）
-ENTRYPOINT ["streamlit", "run", "--server.port=8080", "--server.address=0.0.0.0"]
-CMD ["app.py"]
+ENTRYPOINT ["streamlit", "run"]
+CMD ["app.py", "--server.port=8080", "--server.address=0.0.0.0"]

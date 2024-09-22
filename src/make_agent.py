@@ -1,7 +1,5 @@
-# %%
 import os
 import re
-from dotenv import load_dotenv
 from typing import Callable, Sequence
 
 from langchain.vectorstores import Neo4jVector
@@ -15,9 +13,12 @@ from langchain_community.graphs import Neo4jGraph
 from langchain_google_vertexai import ChatVertexAI, VertexAIEmbeddings
 import vertexai
 
-dotenv_path = '/app/.env'
-load_dotenv(dotenv_path)
-# %%
+# ローカル環境でのみ.envファイルを読み込む
+if os.getenv('ENVIRONMENT') != 'production':
+    from dotenv import load_dotenv
+    dotenv_path = '/app/.env'
+    load_dotenv(dotenv_path)
+
 # クラスを定義する
 class VectorIndexTool:
     """ベクトルインデックスのツールのクラス"""    
