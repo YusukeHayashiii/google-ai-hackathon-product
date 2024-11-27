@@ -15,7 +15,9 @@ services:
             - PROJECT_ID=${PROJECT_ID}
             - REGION=${REGION}
             - STAGING_BUCKET=${STAGING_BUCKET}
-            - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+            # - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
         ports: # ホスト：コンテナのポート番号を指定。ホストは他コンテナと番号被らないようにする
             - "8080:8080" 
+        volumes: # サービスアカウントキーをマウント
+            - ./praxis-tensor-434514-e6-7f874109efde.json:/app/praxis-tensor-434514-e6-7f874109efde.json
         tty: true # コンテナを起動し続ける

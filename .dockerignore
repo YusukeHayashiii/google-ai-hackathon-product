@@ -7,6 +7,7 @@ __pycache__
 *.pyd
 .Python
 env
+.env.example
 pip-log.txt
 pip-delete-this-directory.txt
 .tox
@@ -20,3 +21,8 @@ coverage.xml
 .mypy_cache
 .pytest_cache
 .hypothesis
+application_default_credentials.json
+client_secret_444864034519-d7853j364v3gee8uc8h02k49tf794ob6.apps.googleusercontent.com.json
+memo.txt
+praxis-tensor-434514-e6-7f874109efde.json
+README.md
